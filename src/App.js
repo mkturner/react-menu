@@ -15,6 +15,7 @@ function App() {
           <div className='underline'></div>
         </div>
         <Categories />
+        {/* Pass date into menu component */}
         <Menu items={menuItems} />
       </section>
     </main>
