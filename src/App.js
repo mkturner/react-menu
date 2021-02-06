@@ -6,12 +6,16 @@ import items from './data';
 function App() {
   const [menuItems, setMenuItems] = useState(items);
   const [categories, setCategories] = useState([]);
-  
+
   const filterItems = (category) => {
+    // 'all' button to display all categories
+    if (category === 'all') {
+      setMenuItems(items);
+    }
+    // else filter by category
     const newItems = items.filter((item) => item.category === category);
     setMenuItems(newItems);
   };
-  
 
   return (
     <main>
